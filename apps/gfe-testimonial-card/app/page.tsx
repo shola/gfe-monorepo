@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Attribution } from "@repo/ui/gfe-attribution";
 import "./page.css";
 
 export default function Page() {
@@ -19,31 +20,13 @@ export default function Page() {
             </div>
           </div>
           <div className="text-md text-[#525252]">
-            I've been searching for high-quality abstract images for my design
-            projects, and I'm thrilled to have found this platform. The variety
-            and depth of creativity are astounding!
+            I&apos;ve been searching for high-quality abstract images for my
+            design projects, and I&apos;m thrilled to have found this platform.
+            The variety and depth of creativity are astounding!
           </div>
         </div>
 
-        <div className="credits" data-gfe-screenshot-exclude="true">
-          A challenge by
-          <a
-            href="https://www.greatfrontend.com/projects?ref=challenges"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GreatFrontEnd Projects
-          </a>
-          . Built by
-          <a
-            href="https://www.greatfrontend.com/projects/u/olu"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Michael Olusola Situ
-          </a>
-          .
-        </div>
+        <Attribution />
       </div>
     </main>
   );
