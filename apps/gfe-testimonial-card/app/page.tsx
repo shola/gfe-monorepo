@@ -20,9 +20,9 @@ export default function Page() {
             </div>
           </div>
           <div className="text-md text-[#525252]">
-            I've been searching for high-quality abstract images for my design
-            projects, and I'm thrilled to have found this platform. The variety
-            and depth of creativity are astounding!
+            I&apos;ve been searching for high-quality abstract images for my
+            design projects, and I&apos;m thrilled to have found this platform.
+            The variety and depth of creativity are astounding!
           </div>
         </div>
 
