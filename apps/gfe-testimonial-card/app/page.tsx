@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Attribution } from "@repo/ui/gfe-attribution";
 import "./page.css";
 
 export default function Page() {
@@ -25,25 +26,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="credits" data-gfe-screenshot-exclude="true">
-          A challenge by
-          <a
-            href="https://www.greatfrontend.com/projects?ref=challenges"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GreatFrontEnd Projects
-          </a>
-          . Built by
-          <a
-            href="https://www.greatfrontend.com/projects/u/olu"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Michael Olusola Situ
-          </a>
-          .
-        </div>
+        <Attribution />
       </div>
     </main>
   );
