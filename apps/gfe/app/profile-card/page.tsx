@@ -28,8 +28,9 @@ export default function ProfileCard() {
             Contact me
           </button>
           <div className="flex flex-row justify-center gap-4">
-            <button className="p-2">
+            <button className="p-2" aria-label="Link to github">
               <svg
+                aria-hidden="true"
                 width="18"
                 height="17"
                 viewBox="0 0 18 17"
@@ -42,8 +43,9 @@ export default function ProfileCard() {
                 />
               </svg>
             </button>
-            <button className="p-2">
+            <button className="p-2" aria-label="Link to linkedin">
               <svg
+                aria-hidden="true"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -56,8 +58,9 @@ export default function ProfileCard() {
                 />
               </svg>
             </button>
-            <button className="p-2">
+            <button className="p-2" aria-label="Link to instagram">
               <svg
+                aria-hidden="true"
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -70,8 +73,9 @@ export default function ProfileCard() {
                 />
               </svg>
             </button>
-            <button className="p-2">
+            <button className="p-2" aria-label="Link to X">
               <svg
+                aria-hidden="true"
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
