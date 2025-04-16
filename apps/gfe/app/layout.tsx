@@ -10,7 +10,7 @@ const notoSans = Noto_Sans({
 
 
 export const metadata: Metadata = {
-  title: "Blog Card",
+  title: "GFE Projects Showcase",
   description: "Created for GFE exercises",
 };
 
