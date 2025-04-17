@@ -90,7 +90,7 @@ export default function ProfileCard() {
               </svg>
             </button>
           </div>
-        </div>      
+        </div>
       </div>
       <Attribution />
     </div>
