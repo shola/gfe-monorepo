@@ -1,43 +1,30 @@
-# greatfrontend.com Projects built with Turborepo, Nextjs, and Tailwind
+# greatfrontend.com Projects built with Turborepo, Nextjs, ShadCN, and Tailwind
 
-### Apps and Packages
+This template is for creating a monorepo with shadcn/ui.
 
-- `gfe`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) used by the `gfe` application
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## Apps and Packages
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- `gfe`: a [Next.js](https://nextjs.org/) app with [ShadCN](https://ui.shadcn.com/)
+- `ui`: component library with [ShadCN](https://ui.shadcn.com/) used by the `gfe` application
 
-### Building packages/ui
+## Adding components
 
-This example is set up to produce compiled styles for `ui` components into the `dist` directory. The component `.tsx` files are consumed by the Next.js apps directly using `transpilePackages` in `next.config.ts`. This was chosen for several reasons:
+To add components to your app, run the following command at the root of your `web` app:
 
-- Make sharing one `tailwind.config.ts` to apps and packages as easy as possible.
-- Make package compilation simple by only depending on the Next.js Compiler and `tailwindcss`.
-- Ensure Tailwind classes do not overwrite each other. The `ui` package uses a `ui-` prefix for it's classes.
-- Maintain clear package export boundaries.
-
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.ts` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
-
-For example, in [tailwind.config.ts](packages/tailwind-config/tailwind.config.ts):
-
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/ui/*.{js,ts,jsx,tsx}",
-  ],
+```bash
+pnpm dlx shadcn@latest add button -c apps/web
 ```
 
-If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `ui` package.
+This will place the ui components in the `packages/ui/src/components` directory.
 
-### Utilities
+## Tailwind
 
-This Turborepo has some additional tools already setup for you:
+Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
 
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## Using components
+
+To use the components in your app, import them from the `ui` package.
+
+```tsx
+import { Button } from "@workspace/ui/components/button"
+```
