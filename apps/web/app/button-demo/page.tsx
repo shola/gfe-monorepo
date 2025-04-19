@@ -1,6 +1,7 @@
 import { Button } from "@workspace/ui/components/button";
 import { type ButtonProps } from "@workspace/ui/components/button";
 import { Star } from "lucide-react";
+import "./page.css";
 
 const primaryRow: ButtonProps[] = [
   {
@@ -230,37 +231,27 @@ const destructiveRow: ButtonProps[] = [
   },
 ];
 
+const allRows: Array<Array<ButtonProps>> = [
+  primaryRow,
+  secondaryRow,
+  tertiaryRow,
+  linkRow,
+  ghostRow,
+  destructiveRow,
+];
 export default function Page() {
   return (
-    <div className="flex flex-col gap-8 items-center justify-center min-h-svh bg-white">
-      <div className="flex flex-row items-center justify-center gap-4">
-        {primaryRow.map((props, idx) => (
-          <Button key={`${props.variant}-${idx}`} {...props} />
-        ))}
-      </div>
-      <div className="flex flex-row items-center justify-center gap-4">
-        {secondaryRow.map((props, idx) => (
-          <Button key={`${props.variant}-${idx}`} {...props} />
-        ))}
-      </div>
-      <div className="flex flex-row items-center justify-center gap-4">
-        {tertiaryRow.map((props, idx) => (
-          <Button key={`${props.variant}-${idx}`} {...props} />
-        ))}
-      </div>
-      <div className="flex flex-row items-center justify-center gap-4">
-        {linkRow.map((props, idx) => (
-          <Button key={`${props.variant}-${idx}`} {...props} />
-        ))}
-      </div>
-      <div className="flex flex-row items-center justify-center gap-4">
-        {ghostRow.map((props, idx) => (
-          <Button key={`${props.variant}-${idx}`} {...props} />
-        ))}
-      </div>
-      <div className="flex flex-row items-center justify-center gap-4">
-        {destructiveRow.map((props, idx) => (
-          <Button key={`${props.variant}-${idx}`} {...props} />
+    <div className="max-w-[600px] mx-auto">
+      <div className="flex flex-col gap-8 justify-center justify-items-normal min-h-svh">
+        {allRows.map((row, idx) => (
+          <div
+            key={`${row[0]?.variant}=${idx}}`}
+            className="flex flex-row items-center  gap-4"
+          >
+            {row.map((props, idx) => (
+              <Button key={`${props.variant}-${idx}`} {...props} />
+            ))}
+          </div>
         ))}
       </div>
     </div>

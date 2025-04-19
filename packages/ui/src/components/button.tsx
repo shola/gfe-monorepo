@@ -35,6 +35,10 @@ const buttonVariants = cva(
         variant: "link",
         class: "px-0",
       },
+      {
+        variant: "ghost",
+        class: "px-0",
+      },
     ],
     defaultVariants: {
       variant: "default",
