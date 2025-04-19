@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { Attribution } from "@workspace/ui/components/gfe-attribution";
 
 export default function ProfileCard() {
   return (
-    <div className="container flex justify-center mt-[200px]">
+    <div className="flex justify-center mt-[200px]">
       <div className="card flex flex-col w-[340px] bg-white rounded-lg text-center px-4 py-6 gap-10">
         <div className="card-non-interactive-content flex flex-col gap-6">
           <Image
@@ -91,6 +92,7 @@ export default function ProfileCard() {
           </div>
         </div>
       </div>
+      <Attribution />
     </div>
   );
 }

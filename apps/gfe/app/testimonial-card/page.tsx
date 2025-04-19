@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Attribution } from "@repo/ui/gfe-attribution";
-import "./page.css";
+import { Attribution } from "@workspace/ui/components/gfe-attribution";
 
 export default function Page() {
   return (
