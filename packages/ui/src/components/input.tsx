@@ -42,7 +42,9 @@ function Input({
         </Label>
       )}
       <div className="relative">
-        {mailIcon && <Mail className="absolute top-2 left-2" size={20} color="#a3a3a3" />}
+        {mailIcon && (
+          <Mail className="absolute top-2 left-2" size={20} color="#a3a3a3" />
+        )}
         <input
           id={id}
           type={type}
@@ -52,13 +54,18 @@ function Input({
             "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
             "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
             mailIcon ? "pl-8" : "",
+            helpIcon ? "pr-8" : "",
             className
           )}
           {...props}
         />
         {hint && <span className="text-neutral-400 block mt-1">{hint}</span>}
         {helpIcon && (
-          <CircleHelp className="absolute top-2 right-2" size={20} color="#a3a3a3" />
+          <CircleHelp
+            className="absolute top-2 right-2"
+            size={20}
+            color="#a3a3a3"
+          />
         )}
       </div>
     </div>
