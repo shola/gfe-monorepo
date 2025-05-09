@@ -9,7 +9,7 @@ export default function InputDemo() {
   return (
     <div className="max-w-[300px] mx-auto mt-5">
       <div className="flex flex-col gap-8">
-        <Input 
+        <Input
           type="email"
           id="email1"
           label="Email"
@@ -17,7 +17,7 @@ export default function InputDemo() {
           hint="This is a text hint"
           helpIcon={true}
         />
-         <Input 
+        <Input
           type="email"
           id="email2"
           label="Email"
@@ -26,7 +26,7 @@ export default function InputDemo() {
           mailIcon={true}
           helpIcon={true}
         />
-                 <Input 
+        <Input
           type="email"
           id="email3"
           label="Email"
@@ -34,13 +34,15 @@ export default function InputDemo() {
           hint="This is a text hint"
           helpIcon={true}
         />
-                 <Input 
+        <Input
           type="email"
           id="email4"
           label="Email"
           placeholder="name@email.com"
           hint="This is a text hint"
           helpIcon={true}
+          errorMsg="This is an error message"
+          enableValidation={true}
         />
       </div>
     </div>
